@@ -1,0 +1,50 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+    <!--
+        i hate html
+    -->
+    <head>
+        <title> {{ page.title }} </title>
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+        <meta name="author" content="yours truly">
+    </head>
+    
+    <body>
+        <div class="topbar">
+            <div class="menu"> 
+                <table>
+                    <th>
+                        <a href="/" id="unix-style-pathname"></a>
+                        <script>
+                            var path = location.pathname;
+                            // if (path.includes('.html')) {
+                            //     path = path.substring(0, path.length - 5);
+                            // }
+                            // console.log(path);
+                            document.getElementById("unix-style-pathname").innerHTML = 'clef@clefalto.github.io ~' + path + ' $';
+                        </script>
+                    </th>
+                    <!-- <th> <a href="index.html">viewer@clefalto.github.io ~ $</a> </th> -->
+                    <table>
+                        <!-- we got tables inside tables -->
+                        <th> <a href="/about">/about</a> </th>
+                        <th> <a href="/art">/art</a> </th>
+                        <th> <a href="/posts">/posts</a> </th>
+                        <th> <a href="/projects">/projects</a> </th>
+                    </table>
+                </table>
+            </div>
+        </div>
+        <div class="main">
+            {{ content }}
+        </div>
+        
+        <div class="footer">
+            made with &lt3 by clef
+        </div>
+        <script src="/assets/js/wiggly-text.js"></script>
+    </body>
+</html>

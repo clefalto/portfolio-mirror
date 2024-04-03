@@ -1,0 +1,25 @@
+---
+layout: default
+title: clef blog?
+permalink: /posts
+---
+
+<div class="text">
+    
+</div>
+
+<ul>
+    {% for post in site.posts %}
+    <li class="post-item">
+        <h3 style="line-height: 25%"><a class="pre-post-title" href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="pre-post-timestamp">{{ post.date | date_to_rfc_822 }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- 
+<div class="post-item">
+    <h3><a class="post-title" href="posts/actor-observer_reflection.html">actor-observer reflection</a></h3>
+    <p>reflection on the game I made for Gamespawn's Autumn Game Jam!</p>
+    <p class="post-timestamp">l;kj;lkj</p>
+</div> 

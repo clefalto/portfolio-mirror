@@ -118,22 +118,55 @@ a:hover {
     border-bottom: 1px dotted;
 }
 .post-title {
-    text-decoration:none;
+    text-decoration: none;
+    margin-bottom: -15px;
+}
+
+.pre-post-title {
+    text-decoration: none;
     color: var(--link-color);
 }
-.post-timestamp {
+
+.post-timestamp { /* one piece reference */
+    color: rgb(43, 38, 43);
+}
+
+.pre-post-timestamp { 
     font-size: 10pt;
     color: rgb(43, 38, 43);
 }
 
 .under-construction {
-    animation-name: colorful;
+    animation-name: under-construction;
     animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: infinite;   
+}
 
-    @keyframes colorful {
-        0% {color: yellow};
-        100% {color: black};
+@keyframes under-construction {
+    0%    {color: yellow;}
+    50%   {color: black;}
+    100%  {color: yellow;}
+}
+
+.wavy {
+    animation-name: wavy;
+    animation-duration: 1.3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes wavy {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -15px;
+    }
+    100% {
+        top: 0px;
     }
 }
